@@ -16,7 +16,7 @@ public class ObjectToXmlFile {
 
             Marshaller marshaller = jaxbContext.createMarshaller();
 
-            String path = "src/main/resources/objectXmlFIle.xml";
+            String path = "src/main/resources/xmlFiles/objectXmlFile.xml";
             File objectXMLFile = new File(path);
 
             marshaller.marshal(dto, objectXMLFile);

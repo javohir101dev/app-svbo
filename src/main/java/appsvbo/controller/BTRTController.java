@@ -1,4 +1,4 @@
-package appsvbo;
+package appsvbo.controller;
 
 import appsvbo.entity.Dto;
 import appsvbo.entity.body.FFFF0F;
@@ -22,25 +22,19 @@ import appsvbo.entity.header.FF45;
 import appsvbo.entity.header.ff45Fields.FF49;
 import appsvbo.entity.trailer.FF46;
 import appsvbo.entity.trailer.ff46Fields.FF4A;
-import appsvbo.service.*;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
-@SpringBootApplication
-public class AppSvboApplication {
+@RestController
+@RequestMapping("/api")
+public class BTRTController {
 
-    public static void main(String[] args) {
-
-        SpringApplication.run(AppSvboApplication.class, args);
-
-        Map<String, Dto> dataFlow = new HashMap<>();
+    @GetMapping("/getBtrt51")
+    public Dto getDtoObject(){
         Dto dto = new Dto();
-        dataFlow.put("1", dto);
 
 //        todo  Header fields setting
 
@@ -162,7 +156,7 @@ public class AppSvboApplication {
 
 //        ACCOUNT_BLOCK
         FF26 ff26 = new FF26();
-        body.setFf26(ff26);
+//        body.setFf26(ff26);
 
 //        ACCOUNT_BLOCK
         FF36 ff36 = new FF36();
@@ -179,32 +173,11 @@ public class AppSvboApplication {
 
 //        ACCOUNT_DATA_BLOCK
         FF37 ff37 = new FF37();
-        ff26.setFf37(ff37);
+        ff26.setFf37(new FF37());
 
-
-//       new ObjectToJson<>().toObjectMethod(dto);
-
-
-
-//        ObjectToXmlFile.parseObjectToXmlFile(dto);
-//
-//        Dto dto1 = XmlFIleToObject.xmlToJavaObject();
-
-//        System.out.println(dto1);
-//        System.out.println(dto);
-//
-//        ObjectToJsonFile.objectToJsonFile(dto);
-
-//        Dto dto1 = JsonFileToObject.fromJsonFileToObject();
-//        System.out.println(dto);
-//        System.out.println(dto1);
-//        System.out.println(dto.equals(dto1));
-
-//        XxmlFIleToJsonFIle.xmlFileToJsonFile();
-
-
-
+        System.out.println(dto.toString());
+        return dto;
+//        return new Dto();
     }
-
 
 }

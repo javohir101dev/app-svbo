@@ -14,7 +14,7 @@ public class ObjectToJsonFile {
             ObjectMapper mapper = new ObjectMapper();
             mapper.disable(SerializationFeature.FAIL_ON_EMPTY_BEANS);
             // Writing to a file
-            String path = "src/main/resources/object.json";
+            String path = "src/main/resources/jsonFiles/object.json";
             mapper.writeValue(new File(path), object );
             System.out.println("Json file is created : " + path);
 

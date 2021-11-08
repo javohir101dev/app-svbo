@@ -8,10 +8,11 @@ import lombok.NoArgsConstructor;
  * ACCOUNT_DATA_BLOCK
  */
 @Data
-@NoArgsConstructor
+//@NoArgsConstructor
 //@AllArgsConstructor
 public class FF37 {
 
 //    There is no any mandatory fields
+
 
 }

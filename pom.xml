@@ -13,8 +13,9 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>app-svbo</name>
     <description>app-svbo</description>
+
     <properties>
-        <java.version>11</java.version>
+        <java.version>8</java.version>
     </properties>
 
     <dependencies>
@@ -72,17 +73,22 @@
             <version>3.25.0-GA</version>
         </dependency>
 
-        <!--JSON  JavaFIleToXmlFIle-->
+
+
         <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20160212</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.9.10.5</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
+
+
+
+
+
 
     </dependencies>
 
